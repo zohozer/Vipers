@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="curve_三边曲线封面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.三边曲线封面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_与指定平面不成交线段" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.与指定平面不成交线段.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_两点截取曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.两点截取曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_公差范围内连接曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.公差范围内连接曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_关联曲线成组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.关联曲线成组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_分离重合曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.分离重合曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_创建互补圆" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.创建互补圆.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_删除重合曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.删除重合曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_反转曲线方向" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.反转曲线方向.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_合并曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.合并曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_四边及对角确定四边形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.四边及对角确定四边形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_四边曲线封面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.四边曲线封面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多段线不连续点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多段线不连续点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多段线内角" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多段线内角.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多段线拟合曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多段线拟合曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多段线统计" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多段线统计.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多边形内嵌多边形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多边形内嵌多边形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多边形对角线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多边形内角.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多边形按边数归类" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多边形按边数归类.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_弧线拟合曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.弧线拟合曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_找出共线线段" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.找出共线线段.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_指定数量平分角" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.指定数量平分角.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_按模数划分曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.按模数划分曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_时针方向统一曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.时针方向统一曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线A剪切曲线B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线A剪切曲线B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线位置关系" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线位置关系.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线倒多种圆角" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线倒多种圆角.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线同向偏移" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线同向偏移.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线相似" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线相似.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线线头" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线线头.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线转换" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线转换.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_根据不同长度划分曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.根据不同长度划分曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_根据向量找出平行的线段" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.根据向量找出平行的线段.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_相交位置打断曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.相交位置打断曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_简化多边形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.简化多边形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_统一多段线起点及方向" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.统一多段线起点及方向.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_近似共线曲线成组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.近似共线曲线成组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_通过已知点确定曲线方向" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.通过已知点确定曲线方向.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_filpmatrix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.filpmatrix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_列表B插入列表A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.列表B插入列表A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_删除列表首尾项" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.删除列表首尾项.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_区间得到列表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.区间得到列表.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_插入树形数据" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.插入树形数据.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_替换树形数据" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.替换树形数据.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_根据索引划分列表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.根据索引划分列表.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_移动树形数据" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.移动树形数据.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_镜像列表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.镜像列表.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_sx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.sx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_三次方程" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.三次方程.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_二次方程" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.二次方程.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_公约公倍" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.公约公倍.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_列表转换区间" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.列表转换区间.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_四舍五入" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.四舍五入.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_字符串身份" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.字符串身份.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_循环列表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.循环列表.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_斐波拉契" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.斐波拉契.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_检测数据连续性" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.检测数据连续性.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_犀牛空间文字" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.犀牛空间文字.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_等差数列" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.等差数列.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_繁简转换" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.繁简转换.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_质数" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.质数.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_随机列表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.随机列表.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_sincos函数曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.sincos函数曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_三维点阵" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.三维点阵.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_与已知点距离排序" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.与已知点距离排序.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_与指定向量平行点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.与指定向量平行点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_与指定平面共面点分组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.与指定平面共面点分组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_与曲线距离在指定范围的点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.与曲线距离在指定范围的点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_两组点重合部分序号" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.两组点重合部分序号.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_列表转换网格" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.列表转换网格.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_删除重合点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.删除重合点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_反转平面xyz轴" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.反转平面xyz轴.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_围绕中心点排序" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.围绕中心点排序.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_弹簧线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.弹簧线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_指定点是否共线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.指定点是否共线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_指定点是否共面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.指定点是否共面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_根据方向及距离排序点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.根据方向及距离排序点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_点与闭合曲线关系" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.点与闭合曲线关系.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_点沿指定平面轴排序" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.点沿指定平面轴排序.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_螺旋曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.螺旋曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_螺旋曲线2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.螺旋曲线2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_brep角点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.brep角点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_删除重合brep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.删除重合brep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_反转曲面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.反转曲面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_外包围盒信息" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.外包围盒信息.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_多面体A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.多面体A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_多面体B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.多面体B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_多面体C" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.多面体C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_多面体D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.多面体D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_多面体E" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.多面体E.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_多面体F" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.多面体F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_套管" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.套管.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_对调曲面uv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.对调曲面uv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_平面曲面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.平面曲面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_收回边界" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.收回边界.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_曲面区间" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.曲面区间.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_点在曲面上参数" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.点在曲面上参数.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_突出表皮1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.突出表皮1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮C" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮E" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮E.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮F" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_随机划分曲面" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.随机划分曲面.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tint_曲线上色" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tint.曲线上色.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tint_曲线方向" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tint.曲线方向.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vipers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Vipers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_三边确定三角形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.三边确定三角形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_通过点创建曲面线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.通过点创建曲面线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tint_点云上色" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\display.点云上色.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_边长确定多边形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.边长确定多边形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_编织树" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.编织树.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_判断凹凸多边形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.判断凹凸多边形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_网格表皮G" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.网格表皮G.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_不均匀偏移多段线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.不均匀偏移多段线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve线段最近点闭合" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve线段最近点闭合.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_筛选树枝" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.筛选树枝.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_比较两组列表" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.比较两组列表.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_字符移除" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.字符移除.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_乘法" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.乘法.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="point_公共点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\point.公共点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_取消圆角" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.取消圆角.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_两点半径弧" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.两点半径弧.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_物件随机分组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.物件随机分组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_四圆弧拟合椭圆" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.四圆弧拟合椭圆.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_中间线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.中间线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_分离树干" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.分离树干.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vipers6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Vipers6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tint_物件随机上色" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\tint.物件随机上色.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_接近目标曲线一端为起始点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.接近目标曲线一端为起始点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_通过已知点云确定曲线方向" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.通过已知点云确定曲线方向.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_多边形最小外接矩形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.多边形最小外接矩形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_通过物件确定曲线方向" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.通过物件确定曲线方向.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_共线线段成组" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.共线线段成组.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_四舍五入百分比千分比" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.四舍五入百分比千分比.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_与曲线关联物件" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.与曲线关联物件.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data_物件分类" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\data.物件分类.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线分类" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线分类.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_两条曲线间的点" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.两条曲线间的点.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_曲线同向偏移2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.曲线同向偏移2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_生成闭合曲线" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.生成闭合曲线.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_直线转矩形" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.直线转矩形.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vipers7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Vipers7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mesh_网格" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\mesh.网格.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mesh_brep转网格" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\mesh.brep转网格.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="surface_随机表皮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\surface.随机表皮.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_数字大小互换" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\math.数字大小互换.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curve_共线线段合并" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\curve.共线线段合并.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

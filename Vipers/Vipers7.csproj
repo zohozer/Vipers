@@ -1,0 +1,1448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug64</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CF6DDD0-08F2-414D-917E-BC63A49B390C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vipers</RootNamespace>
+    <AssemblyName>Vipers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Curve">
+      <HintPath>..\..\引用DLL文件\Curve.dll</HintPath>
+    </Reference>
+    <Reference Include="heteroptera">
+      <HintPath>..\..\引用DLL文件\heteroptera.dll</HintPath>
+    </Reference>
+    <Reference Include="PanelingToolsDotNet">
+      <HintPath>..\..\引用DLL文件\PanelingToolsDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="RhinoCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RhinoCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.76.0\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GH_IO">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\McNeel\Rhinoceros\5.0\Plug-ins\Grasshopper (b45a29b1-4343-4035-989e-044e8580d9cf)\0.9.76.0\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3d网格拓扑.cs" />
+    <Compile Include="brep转网格.cs" />
+    <Compile Include="CategoryIcon.cs" />
+    <Compile Include="ViperCurve\线段转矩形.cs" />
+    <Compile Include="ViperCurve\曲线分类.cs" />
+    <Compile Include="ViperCurve\生成闭合曲线.cs" />
+    <Compile Include="ViperList\物件分类.cs" />
+    <Compile Include="ViperCurve\通过物件确定曲线方向.cs" />
+    <Compile Include="VipersTint\物件随机上色.cs" />
+    <Compile Include="ViperList\删除首尾项.cs" />
+    <Compile Include="ViperList\筛选树支.cs" />
+    <Compile Include="ViperCurve\凹凸多边形.cs" />
+    <Compile Include="ViperList\WaveTree.cs" />
+    <Compile Include="VipersTint\点云随机上色.cs" />
+    <Compile Include="ViperCurve\多段线拟合曲线.cs" />
+    <Compile Include="ViperSurface\Texture\砖纹网格.cs" />
+    <Compile Include="ViperList\替换树形数据.cs" />
+    <Compile Include="ViperList\插入树形数据.cs" />
+    <Compile Include="ViperList\Super Flip Matrix.cs" />
+    <Compile Include="ViperList\移动树形数据.cs" />
+    <Compile Include="ViperPoint\根据方向及距离排序点.cs" />
+    <Compile Include="ViperSurface\Texture\矩形网格.cs" />
+    <Compile Include="ViperCurve\四边长度及对角线确定四边形.cs" />
+    <Compile Include="ViperMath\检测数据连续性.cs" />
+    <Compile Include="ViperCurve\三边长度确定三角形.cs" />
+    <Compile Include="ViperSurface\Polygon\PolygonF系列.cs" />
+    <Compile Include="ViperSurface\Polygon\PolygonE系列.cs" />
+    <Compile Include="ViperSurface\Texture\平行四边形网格.cs" />
+    <Compile Include="ViperSurface\曲面区间.cs" />
+    <Compile Include="ViperSurface\删除重合Brep.cs" />
+    <Compile Include="ViperCurve\曲线转换.cs" />
+    <Compile Include="ViperSurface\Polygon\PolygonA系列.cs" />
+    <Compile Include="ViperSurface\Polygon\PolygonB系列.cs" />
+    <Compile Include="ViperSurface\Polygon\PolygonC系列.cs" />
+    <Compile Include="ViperSurface\Polygon\PolygonD系列.cs" />
+    <Compile Include="ViperSurface\Texture\菱形网格.cs" />
+    <Compile Include="ViperSurface\Texture\六边形网格.cs" />
+    <Compile Include="ViperSurface\Texture\三角形网格.cs" />
+    <Compile Include="ViperSurface\Texture\突出表皮1.cs" />
+    <Compile Include="ViperSurface\Texture\突出表皮2.cs" />
+    <Compile Include="ViperList\列表B插入列表A.cs" />
+    <Compile Include="ViperPoint\两组点重合部分序号.cs" />
+    <Compile Include="ViperSurface\收回修剪曲面边界.cs" />
+    <Compile Include="ViperMath\SimplifiedTraditional.cs" />
+    <Compile Include="ViperCurve\统一多段线的起点与方向.cs" />
+    <Compile Include="ViperSurface\点在曲面上的参数.cs" />
+    <Compile Include="ViperCurve\简化多边形.cs" />
+    <Compile Include="ViperPoint\弹簧线.cs" />
+    <Compile Include="ViperPoint\围绕中心点排序.cs" />
+    <Compile Include="ViperPoint\通过与已知点距离排序.cs" />
+    <Compile Include="ViperPoint\删除重合点.cs" />
+    <Compile Include="ViperList\镜像合并列表.cs" />
+    <Compile Include="ViperCurve\找出曲线线头.cs" />
+    <Compile Include="ViperPoint\反转平面XYZ轴.cs" />
+    <Compile Include="ViperMath\S%28x%29.cs" />
+    <Compile Include="ViperMath\等差数列.cs" />
+    <Compile Include="ViperList\通过区间得到列表.cs" />
+    <Compile Include="ViperCurve\互补圆弧复原圆.cs" />
+    <Compile Include="ViperPoint\通过列表数值设置网格.cs" />
+    <Compile Include="ViperCurve\曲线倒多种圆角.cs" />
+    <Compile Include="ViperList\根据索引划分列表.cs" />
+    <Compile Include="ViperSurface\平面曲面.cs" />
+    <Compile Include="ViperSurface\物体外包围盒信息.cs" />
+    <Compile Include="ViperCurve\根据模数划分曲线.cs" />
+    <Compile Include="ViperCurve\曲面点创建曲线.cs" />
+    <Compile Include="ViperSurface\多边形套管.cs" />
+    <Compile Include="ViperPoint\sin，cos函数曲线.cs" />
+    <Compile Include="ViperPoint\点与闭合曲线关系.cs" />
+    <Compile Include="ViperCurve\分离重合曲线.cs" />
+    <Compile Include="ViperCurve\合并曲线并移除重合曲线.cs" />
+    <Compile Include="ViperClass.cs" />
+    <Compile Include="ViperPoint\玫瑰线.cs" />
+    <Compile Include="ViperSurface\不均匀划分曲面.cs" />
+    <Compile Include="ViperSurface\调转曲面uv.cs" />
+    <Compile Include="ViperSurface\反转曲面.cs" />
+    <Compile Include="ViperMath\按指定位数四舍五入.cs" />
+    <Compile Include="ViperSurface\Brep角点.cs" />
+    <Compile Include="ViperMath\super Fibonacci.cs" />
+    <Compile Include="ViperPoint\空间三维点阵.cs" />
+    <Compile Include="ViperCurve\等分角.cs" />
+    <Compile Include="ViperMath\公约数公倍数.cs" />
+    <Compile Include="ViperCurve\找出与平面不正交的线段.cs" />
+    <Compile Include="ViperPoint\指定点是否共面.cs" />
+    <Compile Include="ViperMath\循环列表之和小于给定总数.cs" />
+    <Compile Include="ViperMath\随机数之和小于给定总数.cs" />
+    <Compile Include="ViperCurve\多边形内嵌多边形.cs" />
+    <Compile Include="ViperCurve\多边形对角线.cs" />
+    <Compile Include="ViperCurve\两点截取曲线.cs" />
+    <Compile Include="ViperCurve\找出与指定向量不平行的线段.cs" />
+    <Compile Include="ViperPoint\指定平面内共面点.cs" />
+    <Compile Include="ViperPoint\指定点是否共线.cs" />
+    <Compile Include="ViperPoint\根据向量找出共线点.cs" />
+    <Compile Include="ViperCurve\曲线B与闭合曲线A的位置关系.cs" />
+    <Compile Include="ViperMath\根据列表中的数值划分区间.cs" />
+    <Compile Include="ViperPoint\与曲线满足条件的点.cs" />
+    <Compile Include="ViperCurve\曲线同向偏移.cs" />
+    <Compile Include="ViperMath\S=ax+by+cz+d.cs" />
+    <Compile Include="ViperMath\S=ax+by+c.cs" />
+    <Compile Include="ViperCurve\根据公差连接曲线.cs" />
+    <Compile Include="ViperCurve\根据长度划分曲线.cs" />
+    <Compile Include="ViperCurve\判断曲线是否相似.cs" />
+    <Compile Include="ViperCurve\顺时针方向统一曲线.cs" />
+    <Compile Include="ViperCurve\剪切曲线.cs" />
+    <Compile Include="ViperCurve\多边形按边数归类.cs" />
+    <Compile Include="ViperCurve\多边形内角.cs" />
+    <Compile Include="ViperCurve\合并共线直线.cs" />
+    <Compile Include="ViperCurve\关联曲线成组.cs" />
+    <Compile Include="ViperCurve\相交处打断曲线.cs" />
+    <Compile Include="ViperCurve\删除重合曲线.cs" />
+    <Compile Include="ViperCurve\封闭四边曲线.cs" />
+    <Compile Include="ViperCurve\封闭三边曲线.cs" />
+    <Compile Include="ViperMath\判断输入数字是否为质数.cs" />
+    <Compile Include="ViperMath\给定数值内最大质数.cs" />
+    <Compile Include="ViperMath\第N个质数.cs" />
+    <Compile Include="ViperPoint\阿基米德螺线Ⅱ.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViperPoint\阿基米德螺线Ⅰ.cs" />
+    <Compile Include="VipersInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViperCurve\多段线统计.cs" />
+    <Compile Include="ViperCurve\曲线最优转换弧线.cs" />
+    <Compile Include="ViperMath\获取犀牛空间注释.cs" />
+    <Compile Include="ViperCurve\多边形不连续点.cs" />
+    <Compile Include="ViperPoint\指定平面坐标轴排序.cs" />
+    <Compile Include="ViperCurve\近似共线曲线分组.cs" />
+    <Compile Include="ViperCurve\指定线段近似共线.cs" />
+    <Compile Include="ViperMath\字符串类型.cs" />
+    <Compile Include="VipersTint\曲线上色.cs" />
+    <Compile Include="VipersTint\动态显示曲线方向.cs" />
+    <Compile Include="ViperCurve\根据边长确定多边形.cs" />
+    <Compile Include="ViperSurface\Texture\混合网格.cs" />
+    <Compile Include="ViperCurve\不均匀偏移多段线.cs" />
+    <Compile Include="ViperList\比较两组数据.cs" />
+    <Compile Include="ViperMath\字符移除.cs" />
+    <Compile Include="ViperMath\乘法.cs" />
+    <Compile Include="ViperPoint\公共点.cs" />
+    <Compile Include="ViperCurve\取消圆角.cs" />
+    <Compile Include="ViperCurve\两点半径弧.cs" />
+    <Compile Include="ViperCurve\自动闭合线段.cs" />
+    <Compile Include="ViperList\物件随机分组.cs" />
+    <Compile Include="ViperCurve\四段弧拟合椭圆.cs" />
+    <Compile Include="ViperCurve\中间线.cs" />
+    <Compile Include="ViperList\分离树枝.cs" />
+    <Compile Include="ViperCurve\多段线最小外接矩形.cs" />
+    <Compile Include="ViperCurve\共线线段成组.cs" />
+    <Compile Include="ViperCurve\与曲线关联物件.cs" />
+    <Compile Include="ViperCurve\两条曲线间的点.cs" />
+    <Compile Include="ViperSurface\Texture\随机四边形网格.cs" />
+    <Compile Include="ViperMath\大小互换.cs" />
+    <Compile Include="曲面等距划分网格%28无普适性%29.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\反转曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\阿基米德螺旋1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\阿基米德螺旋2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打断曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关联曲线成组.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\两种产品.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除重合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\质数1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\质数2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\质数3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\沿路径起坡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\反转曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\顺时针方向统一曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\根据不同长度划分曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\根据公差连接曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\满足与曲线位置关系的点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\根据向量找出共线点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\找出共线点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\共面点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\两点截取曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多边形内嵌多边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\随机数列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\循环列表之和小于给定总数.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\指定点是否共面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\线段与平面正交.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\公约公倍数量.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\平分角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\三维点阵.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\super Fibonacci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点在x方向排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点在y方向排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brep角点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\指定位数四舍五入.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点在z方向排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除重合brep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\成员是否在列表中.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\反转曲面uv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\不均匀划分曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\封闭三边线段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\封闭四边线段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x的y次方.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\合并曲线并移除重合部分.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除所有重合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除重合曲线%28保留一个%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\曲线同向偏移.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\使线段正交.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点与闭合曲线位置关系.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\区间并集.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\区间交集.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分割列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sin&amp;cos函数曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Viper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多边形套管.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通过曲面上的点在曲面上画曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\根据模数划分曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\曲线分类.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\物体外包围盒信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\物件分类.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\平面曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除列表首尾.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\倒多种圆角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通过列表数值设置网格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\互补圆弧&amp;复原圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通过区间得到列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通过已知点确定曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S%28x%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\找出曲线线头.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X轴对齐曲线两端.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\反转平面XYZ轴.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\通过与已知点距离排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除重合点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\镜像合并列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\弹簧线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\围绕中心点排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\简化内角大于指定区间的多边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\摊平曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点在曲面上的参数.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\统一闭合多段线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\繁简转换.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\收回曲面修剪边界.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\两组点重合部分序号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\列表B插入列表A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin正三角形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin凸盖.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin凸盖2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin菱形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin六边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\判断两个平面是否平行.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers088.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers089.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers86.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers030..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers039.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers067.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers068.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers076.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers078.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers079.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers084.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers086.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers087.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers092.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers094.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers095.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers097.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers098.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多面体A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多面体B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多面体C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多面体D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多面体E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多面体F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网格表皮A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网格表皮B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网格表皮C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网格表皮D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网格表皮E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\网格表皮F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vipers109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display-02曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.按模数划分曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.创建互补圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多边形按边数归类.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多边形内角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多边形内嵌多边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多段线不连续点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多段线内角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多段线拟合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多段线统计.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.反转曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.分离重合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.根据不同长度划分曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.根据向量找出平行的线段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.公差范围内连接曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.关联曲线成组.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.合并共线线段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.弧线拟合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.两点截取曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线A剪切曲线B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线倒多种圆角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线同向偏移.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线位置关系.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线线头.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线相似.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线转换.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.三边曲线封面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.删除重合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.时针方向统一曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.四边及对角确定四边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.四边曲线封面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.统一多段线起点及方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.相交位置打断曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.与指定平面不成交线段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.filpmatrix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.插入树形数据.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.根据索引划分列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.镜像列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.列表B插入列表A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.区间得到列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.替换树形数据.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.sx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.等差数列.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.二次方程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.繁简转换.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.斐波拉契.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.公约公倍.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.检测数据连续性.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.列表转换区间.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.三次方程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.四舍五入.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.随机列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.犀牛空间文字.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.循环列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.质数.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.字符串身份.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.sincos函数曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.弹簧线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.点沿指定平面轴排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.点与闭合曲线关系.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.反转平面xyz轴.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.根据方向及距离排序点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.两组点重合部分序号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.列表转换网格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.螺旋曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.螺旋曲线2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.三边确定三角形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.三维点阵.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.围绕中心点排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.与曲线距离在指定范围的点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.与已知点距离排序.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.与指定平面共面点分组.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.与指定向量平行点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.指定点是否共面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.指定点是否共线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.brep角点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.点在曲面上参数.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.对调曲面uv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.多面体A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.多面体B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.多面体C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.多面体D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.多面体E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.多面体F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.反转曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.平面曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.曲面区间.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.删除重合brep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.收回边界.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.随机划分曲面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.套管.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.通过点创建曲面线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.突出表皮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.外包围盒信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tint.曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tint.曲线上色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vipers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.三边确定三角形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.通过点创建曲面线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.模数曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.近似共线曲线成组.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.找出共线线段.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display.点云上色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.边长确定多边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.编织树.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.判断凹凸多边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.网格表皮G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.不均匀偏移多段线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve线段最近点闭合.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.筛选树枝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.删除列表首尾项.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.比较两组列表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.简化多边形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.合并曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.字符移除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.移动树形数据.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.乘法.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.删除重合点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point.公共点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.取消圆角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.两点半径弧.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.物件随机分组.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.四圆弧拟合椭圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.中间线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.分离树干.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tint.物件随机上色2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vipers6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tint.物件随机上色3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tint.物件随机上色4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tint.物件随机上色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.接近目标曲线一端为起始点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.指定数量平分角.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.通过已知点确定曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.通过已知点云确定曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.多边形最小外接矩形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.通过物件确定曲线方向.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.共线线段成组.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.四舍五入百分比千分比.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c44657275f2895ef6746da2317ca791.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.物件分类.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.与曲线关联物件.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.物件分类.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线分类.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.两条曲线间的点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.曲线同向偏移2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.生成闭合曲线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vipers7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesh.brep转网格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesh.网格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.直线转矩形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.随机表皮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.数字大小互换.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curve.共线线段合并.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"
+Erase "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhinoceros 5.0 WIP (64-bit)\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+</Project>
