@@ -11,6 +11,8 @@ About
 =======
 Vipers: Components developed by Tang Chi for Rhinoceros/Grasshopper.
 
+The purpose of this repository is to translate the components from Chinese into the English language.
+
 Screenshots
 ===========
 
