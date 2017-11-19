@@ -9,7 +9,7 @@ Tang Chi
 
 About
 =======
-Vipers: Components for Rhinoceros/Grasshopper developed by Tang Chi
+Vipers: Components developed by Tang Chi for Rhinoceros/Grasshopper.
 
 Screenshots
 ===========
