@@ -1,4 +1,4 @@
-VIPERS (by tangchi)
+VIPERS v7 (by tangchi)
 ===================
 
 ![Vipers](/images/Vipers.jpg)
