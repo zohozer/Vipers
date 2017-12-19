@@ -35,21 +35,15 @@ License
 
 Copyright (c) 2017-present, Tang Chi
 
-Vipers is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+Vipers is free software; you can redistribute it and/or modify it under the terms of the MIT License.
 
-Vipers is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+Vipers is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-Additional permission under GNU GPL version 3 section 7:
-
-Vipers uses the Rhinoceros RhinoCommon and Grasshopper libraries, which come with/for Rhinoceros 5.0. Vipers depends fundamentally on the use of Rhinoceros and Grasshopper, and so Rhinocommon, Grasshopper and all associated libraries are assumed to be "System Libraries" as defined by the GPL, and thus are excluded from this license.
+Vipers uses the Rhinoceros RhinoCommon and Grasshopper libraries, which come with/for Rhinoceros 5.0. Vipers depends fundamentally on the use of Rhinoceros and Grasshopper, and so Rhinocommon, Grasshopper and all associated libraries are assumed to be "System Libraries".
 
 Please contact McNeel & Associates for further information.
 
 http://www.en.na.mcneel.com/
-
-You should have received a copy of the GNU General Public License along with Vipers; If not, see http://www.gnu.org/licenses/.
-
-@license GPL-3.0+ http://spdx.org/licenses/GPL-3.0+
 
 Legal Stuff
 ===========
