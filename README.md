@@ -28,7 +28,7 @@ Screenshots
 
 ![Vipers Surface](/images/Vipers_Surface.png)
 
-![Vipers Extra](/images/Vipers_2.png)
+![Vipers Extra](/images/Vipers_Tint.png)
 
 License
 =======
