@@ -28,8 +28,8 @@ namespace Vipers
         /// Initializes a new instance of the 动态显示曲线方向 class.
         /// </summary>
         public CurveDirection()
-            : base("动态显示曲线方向", "CurveDirection",
-                "可通过配合timer的使用，动态显示曲线方向，右键设置箭头数量",
+            : base("Curve Direction", "CurveDirection",
+                "Displays the direction of curves (use timer for dynamic display, RMB to change number of arrows)",
                 "Vipers", "Viper.tint")
         {
         }
@@ -39,9 +39,9 @@ namespace Vipers
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddCurveParameter("曲线","C","要显示方向的曲线",GH_ParamAccess.tree);
-            pManager.AddIntegerParameter("箭头大小","S","显示曲线方向的箭头的大小",GH_ParamAccess.item,30);
-            Message = "箭头数量26";
+            pManager.AddCurveParameter("Curves","C","Curves to display",GH_ParamAccess.tree);
+            pManager.AddIntegerParameter("Size","S","Size of arrows",GH_ParamAccess.item,30);
+            Message = "26 Arrows";
             pManager.HideParameter(0);
         }
 
@@ -160,7 +160,7 @@ namespace Vipers
                 m_absolute1 = value;
                 if ((m_absolute1))
                 {
-                    Message = "箭头数量26";
+                    Message = "26 Arrows";
                 }
             }
         }
@@ -172,7 +172,7 @@ namespace Vipers
                 m_absolute2 = value;
                 if ((m_absolute2))
                 {
-                    Message = "箭头数量50";
+                    Message = "50 Arrows";
                 }
             }
         }
@@ -184,7 +184,7 @@ namespace Vipers
                 m_absolute3 = value;
                 if ((m_absolute3))
                 {
-                    Message = "箭头数量74";
+                    Message = "74 Arrows";
                 }
             }
         }
@@ -194,9 +194,9 @@ namespace Vipers
         protected override void AppendAdditionalComponentMenuItems(System.Windows.Forms.ToolStripDropDown menu)
         {
             // Append the item to the menu, making sure it's always enabled and checked if Absolute is True.
-            ToolStripMenuItem item = Menu_AppendItem(menu, "箭头数量26", Menu_AbsoluteClicked, true, Absolute1);
-            ToolStripMenuItem item2 = Menu_AppendItem(menu, "箭头数量50", Menu_AbsoluteClicked2, true, Absolute2);
-            ToolStripMenuItem item3 = Menu_AppendItem(menu, "箭头数量74", Menu_AbsoluteClicked3, true, Absolute3);
+            ToolStripMenuItem item = Menu_AppendItem(menu, "26 Arrows", Menu_AbsoluteClicked, true, Absolute1);
+            ToolStripMenuItem item2 = Menu_AppendItem(menu, "50 Arrows", Menu_AbsoluteClicked2, true, Absolute2);
+            ToolStripMenuItem item3 = Menu_AppendItem(menu, "74 Arrows", Menu_AbsoluteClicked3, true, Absolute3);
             // Specifically assign a tooltip text to the menu item.
             item.BackColor = cor1;
             item2.BackColor = cor2;

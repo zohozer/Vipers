@@ -23,11 +23,11 @@ namespace Vipers
     public class RandomGeometryColor : GH_Component
     {
         public RandomGeometryColor()
-            : base("物件随机上色", "RandomGeometryColor",
-                "对输入的物件（点，线，面，体）上色，如果输入的物件是线性数据，则显示用户指定颜色；如果输入的是树形数据则随机对物件上色，组内物件颜色一样",
+            : base("Color Geometry", "GeometryColor",
+                "Displays custom colours for Rhino generic geometry",
                 "Vipers", "viper.tint")
         {
-            Message = "物件随机上色";
+            Message = "Color Geometry";
         }
         [StructLayout(LayoutKind.Sequential)]
         internal struct GH_CustomPreviewItem
@@ -52,10 +52,10 @@ namespace Vipers
         private BoundingBox m_clipbox;
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddGeometryParameter("物件", "G", "待上色的物件", GH_ParamAccess.list);
+            pManager.AddGeometryParameter("Geometry", "G", "Generic geometry to color", GH_ParamAccess.list);
             pManager.HideParameter(0);
-            pManager.AddColourParameter("颜色", "C", "如果输入的物件是线性数据，则显示用户指定颜色；如果输入的是树形数据则随机对物件上色（第一组颜色与指定色一样，其他组随机上色）组内物件颜色一样", GH_ParamAccess.item, Color.Yellow);
-            pManager.AddIntegerParameter("种子", "S", "随机种子，改变数值可改变随机颜色（仅对树形数据有用）", GH_ParamAccess.item, 0);
+            pManager.AddColourParameter("Colour", "C", "Colours to display", GH_ParamAccess.item, Color.Yellow);
+            pManager.AddIntegerParameter("Seed", "S", "Seed of random colours for each branch", GH_ParamAccess.item, 0);
         }
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {

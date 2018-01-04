@@ -28,8 +28,8 @@ namespace Vipers
         /// Initializes a new instance of the MyComponent1 class.
         /// </summary>
         public PointColour()
-            : base("点云随机上色", "PointColour",
-                "指定点的显示半径和颜色，如果输入的是线性数据，则按照指定颜色上色，如果是树形数据，则随机上色（组内点颜色相同）,右键选择点样式",
+            : base("Colour Ponts", "PointColour",
+                "Displays custom colours for the points",
                 "Vipers", "Viper.tint")
         {
             Message = "ControlPoint";
@@ -40,10 +40,10 @@ namespace Vipers
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddPointParameter("点", "P", "待上色点", GH_ParamAccess.tree);
-            pManager.AddIntegerParameter("半径", "R", "点的半径", GH_ParamAccess.item, 5);
-            pManager.AddColourParameter("颜色", "C", "给点指定颜色，如果输入的是线性数据，则按照指定颜色上色，如果是树形数据，则随机上色（组内点颜色相同）", GH_ParamAccess.item, Color.LightGreen);
-            pManager.AddIntegerParameter("随机种子", "S", "如果是树形数据，则可通过调节随机值来改变随机效果", GH_ParamAccess.item, 3);
+            pManager.AddPointParameter("Points", "P", "Points to colour", GH_ParamAccess.tree);
+            pManager.AddIntegerParameter("Radius", "R", "Radius of points", GH_ParamAccess.item, 5);
+            pManager.AddColourParameter("Colour", "C", "Colours to display", GH_ParamAccess.item, Color.LightGreen);
+            pManager.AddIntegerParameter("Seed", "S", "Seed of random colours for each branch", GH_ParamAccess.item, 3);
             pManager.HideParameter(0);
         }
 
@@ -202,11 +202,11 @@ namespace Vipers
             ToolStripMenuItem item2 = Menu_AppendItem(menu, "ControlPoint", Menu_AbsoluteClicked2, true, Abs2);
             ToolStripMenuItem item3 = Menu_AppendItem(menu, "ActivePoint", Menu_AbsoluteClicked3, true, Abs3);
             // Specifically assign a tooltip text to the menu item.
-            item.ToolTipText = "点样式为:Simple";
+            item.ToolTipText = "Style: Simple";
             item.BackColor = cor1;
-            item2.ToolTipText = "点样式为:ControlPoint";
+            item2.ToolTipText = "Style: ControlPoint";
             item2.BackColor = cor2;
-            item3.ToolTipText = "点样式为:ActivePoint";
+            item3.ToolTipText = "Style: ActivePoint";
             item3.BackColor = cor3;
         }
         private void Menu_AbsoluteClicked(object sender, EventArgs e)
@@ -223,7 +223,7 @@ namespace Vipers
         {
             RecordUndoEvent("PTC");
             Abs1 = false;
-            Abs2 =true;
+            Abs2 = true;
             Abs3 = false;
             Message = "ControlPoint";
             style = Rhino.Display.PointStyle.ControlPoint;

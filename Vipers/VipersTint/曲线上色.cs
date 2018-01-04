@@ -27,8 +27,8 @@ namespace Vipers/////////TangChi 2016.4.11
         /// Initializes a new instance of the 曲线上色 class.
         /// </summary>
         public CurveColour()
-            : base("曲线亮显", "CurveColour",
-                "给曲线上色及增加厚度，如果输入的是线性数据，则按照指定颜色上色，如果是树形数据，则随机上色（组内曲线颜色相同）",
+            : base("Colour Curve", "CurveColour",
+                "Displays custom colours for the curves",
                 "Vipers", "Viper.tint")
         {
         }
@@ -38,12 +38,12 @@ namespace Vipers/////////TangChi 2016.4.11
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddCurveParameter("曲线","C","待上色曲线",GH_ParamAccess.tree);
-            pManager.AddIntegerParameter("粗细","T","曲线的粗细",GH_ParamAccess.item,5);
-            pManager.AddColourParameter("颜色", "C", "指定颜色,如果给曲线上色及增加厚度，如果输入的是线性数据，则按照指定颜色上色，如果是树形数据，则随机上色（组内曲线颜色相同）",GH_ParamAccess.item,Color.FromArgb(255,255,128));
-            pManager.AddIntegerParameter("随机种子","S","如果是树形数据，则可通过调节随机值来改变随机效果",GH_ParamAccess.item,0);
+            pManager.AddCurveParameter("Curves","C","Curves to color",GH_ParamAccess.tree);
+            pManager.AddIntegerParameter("Thickness","T","Curve thickness to display",GH_ParamAccess.item,5);
+            pManager.AddColourParameter("Colour", "C", "Colours to display",GH_ParamAccess.item,Color.FromArgb(255,255,128));
+            pManager.AddIntegerParameter("Seed","S", "Seed of random colours for each branch", GH_ParamAccess.item,0);
             pManager.HideParameter(0);
-            Message = "曲线亮显";
+            Message = "Colour Curve";
         }
 
         /// <summary>
