@@ -28,8 +28,8 @@ namespace myGha
         /// Initializes a new instance of the MyComponent3 class.
         /// </summary>
         public PolyB()
-            : base("三角形多面体", "PolygonB",
-                "三角形多面体，seal端输入为true时，生成曲面，否则只生成外轮廓多边形。右键多选",
+            : base("Triangular Polyhedron", "PolygonB",
+                "Create triangular polyhedron (RMB to change shape)",
                 "Vipers", "Viper.surface")
         {
         }
@@ -42,11 +42,11 @@ namespace myGha
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddPlaneParameter("参考平面", "P", "多面体的参考平面", GH_ParamAccess.item, Plane.WorldXY);
-            pManager.AddNumberParameter("半径", "R", "多面体半径", GH_ParamAccess.item, 100);
-            pManager.AddBooleanParameter("封面", "S", "true：封面，false：不封面", GH_ParamAccess.item, false);
+            pManager.AddPlaneParameter("Plane", "P", "Base plane", GH_ParamAccess.item, Plane.WorldXY);
+            pManager.AddNumberParameter("Radius", "R", "Shape radius", GH_ParamAccess.item, 1);
+            pManager.AddBooleanParameter("Surface", "S", "Output surfaces", GH_ParamAccess.item, false);
             pManager.HideParameter(0);
-            Message = "TC-多面体-B-01\n三角形";
+            Message = "260 Sides";
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace myGha
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("外轮廓", "P", "得到外轮廓", GH_ParamAccess.list);
-            pManager.AddBrepParameter("多面体", "P", "得到多面体", GH_ParamAccess.list);
+            pManager.AddCurveParameter("Polyline", "P", "Output polylines", GH_ParamAccess.list);
+            pManager.AddBrepParameter("Polygon", "P", "Output faces", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -4237,7 +4237,7 @@ static  string str3 = @"{5.153878, 45.795536, 89.359726}
           polygonA = value;
           if ((polygonA))
           {
-              Message = "TC-多面体-B-01\n三角形";
+              Message = "260 Sides";
           }
       }
   }
@@ -4249,7 +4249,7 @@ static  string str3 = @"{5.153878, 45.795536, 89.359726}
           polygonB = value;
           if ((polygonB))
           {
-              Message = "TC-多面体-B-02\n三角形";
+              Message = "380 Sides";
           }
       }
   }
@@ -4261,7 +4261,7 @@ static  string str3 = @"{5.153878, 45.795536, 89.359726}
           polygonC = value;
           if ((polygonC))
           {
-              Message = "TC-多面体-B-03\n三角形";
+              Message = "740 Sides";
           }
       }
   }
@@ -4271,15 +4271,15 @@ static  string str3 = @"{5.153878, 45.795536, 89.359726}
   protected override void AppendAdditionalComponentMenuItems(System.Windows.Forms.ToolStripDropDown menu)
   {
       // Append the item to the menu, making sure it's always enabled and checked if Absolute is True.
-      ToolStripMenuItem item = Menu_AppendItem(menu, "260面体", Menu_AbsoluteClicked, true, PolygonA);
-      ToolStripMenuItem item2 = Menu_AppendItem(menu, "380面体", Menu_AbsoluteClicked2, true, PolygonB);
-      ToolStripMenuItem item3 = Menu_AppendItem(menu, "740面体", Menu_AbsoluteClicked3, true, PolygonC);
+      ToolStripMenuItem item = Menu_AppendItem(menu, "260 Faces", Menu_AbsoluteClicked, true, PolygonA);
+      ToolStripMenuItem item2 = Menu_AppendItem(menu, "380 Faces", Menu_AbsoluteClicked2, true, PolygonB);
+      ToolStripMenuItem item3 = Menu_AppendItem(menu, "740 Faces", Menu_AbsoluteClicked3, true, PolygonC);
       // Specifically assign a tooltip text to the menu item.
-      item.ToolTipText = "由三角形组成的260面体";
+      item.ToolTipText = "260-sided triangular polyhedron";
       item.BackColor = cor1;
-      item2.ToolTipText = "由三角形组成的380面体";
+      item2.ToolTipText = "380-sided triangular polyhedron";
       item2.BackColor = cor2;
-      item3.ToolTipText = "由三角形组成的740面体";
+      item3.ToolTipText = "740-sided triangular polyhedron";
       item3.BackColor = cor3;
   }
   private void Menu_AbsoluteClicked(object sender, EventArgs e)

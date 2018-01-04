@@ -29,8 +29,8 @@ namespace SuperVipers///////TangChi 2015.11.2
         /// Initializes a new instance of the MyComponent61 class.
         /// </summary>
         public Hexagons()
-            : base("六边形网格", "Hexagons",
-                "基于Lunchbox的六边形网格，修复了闭合曲面接缝bug",
+            : base("Hexagonal Panels", "Hexagons",
+                "Based on Lunchbox Hexagon Cells",
                 "Vipers", "Viper.surface")
         {
         }
@@ -43,10 +43,10 @@ namespace SuperVipers///////TangChi 2015.11.2
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            Message = "TC-1-01\n六边形网格";
-            pManager.AddSurfaceParameter("曲面", "S", "待划分的曲面", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("u方向数量", "U", "实际数量是用户指定数量的两倍", GH_ParamAccess.item, 50);
-            pManager.AddIntegerParameter("v方向数量", "V", "v方向的网格数量", GH_ParamAccess.item, 50);
+            Message = "Hexagonal Panels";
+            pManager.AddSurfaceParameter("Surface", "S", "Surface to divide", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("U Count", "U", "Number of divisions in U direction", GH_ParamAccess.item, 10);
+            pManager.AddIntegerParameter("V Count", "V", "Number of divisions in V direction", GH_ParamAccess.item, 10);
             pManager.HideParameter(0);
         }
 
@@ -55,8 +55,8 @@ namespace SuperVipers///////TangChi 2015.11.2
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("网格", "C", "生成的六边形网格", GH_ParamAccess.tree);
-            pManager.AddPointParameter("网格点", "P", "六边形网格对应的点", GH_ParamAccess.tree);
+            pManager.AddCurveParameter("Hexagons", "H", "Edge lines", GH_ParamAccess.tree);
+            pManager.AddPointParameter("Points", "P", "Panel vertices", GH_ParamAccess.tree);
             pManager.HideParameter(1);
         }
 

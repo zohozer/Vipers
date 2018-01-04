@@ -28,8 +28,8 @@ namespace myGha
         /// Initializes a new instance of the MyComponent2 class.
         /// </summary>
         public PolyA()
-            : base("类足球形多面体", "PolygonA",
-                "类足球形多面体，seal端输入为true时，生成曲面，否则只生成外轮廓多边形。右键多选",
+            : base("Spherical Polyhedron", "PolygonA",
+                "Create a football-like spherical polyhedron (RMB to change shape)",
                 "Vipers", "Viper.surface")
         {
         }
@@ -42,11 +42,11 @@ namespace myGha
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddPlaneParameter("参考平面", "P", "多面体的参考平面", GH_ParamAccess.item, Plane.WorldXY);
-            pManager.AddNumberParameter("半径", "R", "多面体半径", GH_ParamAccess.item, 100);
-            pManager.AddBooleanParameter("封面","S","true：封面，false：不封面",GH_ParamAccess.item,false);
+            pManager.AddPlaneParameter("Plane", "P", "Base plane", GH_ParamAccess.item, Plane.WorldXY);
+            pManager.AddNumberParameter("Radius", "R", "Shape radius", GH_ParamAccess.item, 1);
+            pManager.AddBooleanParameter("Surface","S","Output surfaces",GH_ParamAccess.item,false);
             pManager.HideParameter(0);
-            Message = "TC-多面体-A-01\n正五边形&六边形";
+            Message = "32 Sides";
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace myGha
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("外轮廓", "P", "得到外轮廓", GH_ParamAccess.list);
-            pManager.AddBrepParameter("多面体", "P", "得到多面体", GH_ParamAccess.list);
+            pManager.AddCurveParameter("Polyline", "P", "Output polylines", GH_ParamAccess.list);
+            pManager.AddBrepParameter("Polygon", "P", "Output faces", GH_ParamAccess.list);
         }
         #region///////稀疏
        static string str1 = @"{50.0, -40.45085, 105.901699}
@@ -3046,7 +3046,7 @@ namespace myGha
           polygonA = value;
           if ((polygonA))
           {
-              Message = "TC-多面体-A-01\n正五边形&六边形";
+              Message = "32 Sides";
           }
       }
   }
@@ -3058,7 +3058,7 @@ namespace myGha
           polygonB = value;
           if ((polygonB))
           {
-              Message = "TC-多面体-A-02\n五边形&六边形";
+              Message = "92 Sides";
           }
       }
   }
@@ -3070,7 +3070,7 @@ namespace myGha
           polygonC = value;
           if ((polygonC))
           {
-              Message = "TC-多面体-A-03\n五边形&六边形";
+              Message = "372 Sides";
           }
       }
   }
@@ -3113,15 +3113,15 @@ namespace myGha
   protected override void AppendAdditionalComponentMenuItems(System.Windows.Forms.ToolStripDropDown menu)
   {
       // Append the item to the menu, making sure it's always enabled and checked if Absolute is True.
-      ToolStripMenuItem item = Menu_AppendItem(menu, "32面体", Menu_AbsoluteClicked, true, PolygonA);
-      ToolStripMenuItem item2 = Menu_AppendItem(menu, "92面体", Menu_AbsoluteClicked2, true, PolygonB);
-      ToolStripMenuItem item3 = Menu_AppendItem(menu, "372面体", Menu_AbsoluteClicked3, true, PolygonC);
+      ToolStripMenuItem item = Menu_AppendItem(menu, "32 Sides", Menu_AbsoluteClicked, true, PolygonA);
+      ToolStripMenuItem item2 = Menu_AppendItem(menu, "92 Sides", Menu_AbsoluteClicked2, true, PolygonB);
+      ToolStripMenuItem item3 = Menu_AppendItem(menu, "372 Sides", Menu_AbsoluteClicked3, true, PolygonC);
       // Specifically assign a tooltip text to the menu item.
-      item.ToolTipText = "由正五边形和六边形组成的32面体";
+      item.ToolTipText = "A 32-sided polyhedron consisting of regular pentagons and hexagons";
       item.BackColor = cor1;
-      item2.ToolTipText = "由五边形和六边形组成的92面体";
+      item2.ToolTipText = "A 92-sided polyhedron consisting of regular pentagons and hexagons";
       item2.BackColor = cor2;
-      item3.ToolTipText = "由五边形和六边形组成的372面体";
+      item3.ToolTipText = "A 372-sided polyhedron consisting of regular pentagons and hexagons";
       item3.BackColor = cor3;
   }
   private void Menu_AbsoluteClicked(object sender, EventArgs e)

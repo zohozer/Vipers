@@ -12,8 +12,8 @@ namespace Vipers/////TangChi 2015.7.27
         /// Initializes a new instance of the MyComponent30 class.
         /// </summary>
         public PolygonPipe()
-            : base("多边形套管", "PolygonPipe",
-                "根据曲线生成多边形套管",
+            : base("Polygonal Pipe", "PolygonPipe",
+                "Create polygonal pipe from curve",
                 "Vipers", "Viper.surface")
         {
         }
@@ -23,12 +23,12 @@ namespace Vipers/////TangChi 2015.7.27
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddCurveParameter("轨迹曲线","C","套管的轨迹曲线",GH_ParamAccess.item);
-            pManager.AddNumberParameter("半径","R","套管半径",GH_ParamAccess.item,20);
-            pManager.AddIntegerParameter("边数", "S", "套管边数", GH_ParamAccess.item,6);
-            pManager.AddNumberParameter("旋转角度","A","旋转截面多边形的角度(弧度数)",GH_ParamAccess.item,0);
+            pManager.AddCurveParameter("Curve","C","Base curve",GH_ParamAccess.item);
+            pManager.AddNumberParameter("Radius","R","Pipe radius",GH_ParamAccess.item,20);
+            pManager.AddIntegerParameter("Sides", "S", "Number of sides", GH_ParamAccess.item,6);
+            pManager.AddNumberParameter("Angle","A","Rotation angle (radians)",GH_ParamAccess.item,0);
             pManager.HideParameter(0);
-            Message = "多边形套管";
+            Message = "Polygonal Pipe";
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Vipers/////TangChi 2015.7.27
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddBrepParameter("套管","B","生成的套管",GH_ParamAccess.list);
+            pManager.AddBrepParameter("Pipe","P","Resulting pipe",GH_ParamAccess.list);
         }
 
         /// <summary>

@@ -12,8 +12,8 @@ namespace Vipers///TangChi 2015.11.17
         /// Initializes a new instance of the MyComponent51 class.
         /// </summary>
         public PointInformation()
-            : base("点在曲面上的参数", "PointInformation",
-                "通过u，v百分比得到曲面上的点，同时得到该点在曲面的信息",
+            : base("Surface Information", "SrfInfo",
+                "Retrieve surface properties at UV coordinate",
                 "Vipers", "Viper.surface")
         {
         }
@@ -23,11 +23,11 @@ namespace Vipers///TangChi 2015.11.17
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("曲面", "S", "点所在的曲面", GH_ParamAccess.item);
-            pManager.AddNumberParameter("U方向百分比", "PU", "点曲面u方向的百分比", GH_ParamAccess.item,0.5);
-            pManager.AddNumberParameter("V方向百分比", "PP", "点曲面v方向的百分比", GH_ParamAccess.item, 0.5);
+            pManager.AddSurfaceParameter("Surface", "S", "Surface to operate on", GH_ParamAccess.item);
+            pManager.AddNumberParameter("U Coordinate", "U", "U coordinate of the point", GH_ParamAccess.item,0.5);
+            pManager.AddNumberParameter("V Coordinate", "V", "V coordinate of the point", GH_ParamAccess.item, 0.5);
             pManager.HideParameter(0);
-            Message = "点在曲面上的参数";
+            Message = "Surface Information";
         }
 
         /// <summary>
@@ -35,11 +35,11 @@ namespace Vipers///TangChi 2015.11.17
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddPointParameter("点","P","对应uv百分比的点的位置",GH_ParamAccess.item);
-            pManager.AddPointParameter("点", "P", "uv点的位置", GH_ParamAccess.item);
-            pManager.AddNumberParameter("高斯曲率", "G", "点在曲面的高斯曲率", GH_ParamAccess.item);
-            pManager.AddNumberParameter("平均曲率", "M", "点在曲面的平均曲率", GH_ParamAccess.item);
-            pManager.AddVectorParameter("向量","N","点在曲面的法向量",GH_ParamAccess.item);
+            pManager.AddPointParameter("Point","P","Point at UV coordinates",GH_ParamAccess.item);
+            pManager.AddPointParameter("Point", "P", "UV point position (to the origin)", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Gaussian Curvature", "G", "Gaussian curvature at point locus", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Average Curvature", "A", "Average curvature at point locus", GH_ParamAccess.item);
+            pManager.AddVectorParameter("Normal","N", "Normal at point locus", GH_ParamAccess.item);
             pManager.HideParameter(1);
         }
 

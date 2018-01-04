@@ -27,8 +27,8 @@ namespace Vipers///////TangChi 2016.01.10
         /// Initializes a new instance of the rectangle class.
         /// </summary>
         public rectangle()
-            : base("矩形网格", "Rectangle",
-                "传统类型的矩形网格",
+            : base("Rectangular Panels", "Rectangle",
+                "Create rectangular panels from a surface",
                 "Vipers", "Viper.surface")
         {
         }
@@ -41,10 +41,10 @@ namespace Vipers///////TangChi 2016.01.10
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("曲面", "S", "待划分的曲面", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("u方向数量", "U", "u方向的网格数量", GH_ParamAccess.item, 50);
-            pManager.AddIntegerParameter("v方向数量", "V", "v方向的网格数量", GH_ParamAccess.item, 50);
-            Message = "TC-1-05\n矩形网格";
+            pManager.AddSurfaceParameter("Surface", "S", "Surface to divide", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("U Count", "U", "Number of divisions in U direction", GH_ParamAccess.item, 10);
+            pManager.AddIntegerParameter("V Count", "V", "Number of divisions in V direction", GH_ParamAccess.item, 10);
+            Message = "Rectangular Panels";
         }
 
         /// <summary>
@@ -52,8 +52,8 @@ namespace Vipers///////TangChi 2016.01.10
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("网格", "C", "生成的矩形网格", GH_ParamAccess.tree);
-            pManager.AddPointParameter("网格点", "P", "矩形网格对应的点", GH_ParamAccess.tree);
+            pManager.AddCurveParameter("Rectangles", "R", "Edge lines", GH_ParamAccess.tree);
+            pManager.AddPointParameter("Points", "P", "Panel vertices", GH_ParamAccess.tree);
             pManager.HideParameter(1);
         }
 

@@ -28,8 +28,8 @@ namespace Vipers
         /// Initializes a new instance of the MyComponent1 class.
         /// </summary>
         public PolyE()
-            : base("等腰三角形多面体", "PolygonE",
-                "等腰三角形多面体，seal端输入为true时，生成曲面，否则只生成外轮廓多边形。右键多选",
+            : base("Isosceles Triangle Polyhedron", "PolygonE",
+                "Create isosceles triangle polyhedron (RMB to change shape)",
                 "Vipers", "Viper.surface")
         {
         }
@@ -42,11 +42,11 @@ namespace Vipers
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddPlaneParameter("参考平面", "P", "多面体的参考平面", GH_ParamAccess.item, Plane.WorldXY);
-            pManager.AddNumberParameter("半径", "R", "多面体半径", GH_ParamAccess.item, 100);
-            pManager.AddBooleanParameter("封面", "S", "true：封面，false：不封面", GH_ParamAccess.item, false);
+            pManager.AddPlaneParameter("Plane", "P", "Base plane", GH_ParamAccess.item, Plane.WorldXY);
+            pManager.AddNumberParameter("Radius", "R", "Shape radius", GH_ParamAccess.item, 1);
+            pManager.AddBooleanParameter("Surface", "S", "Output surfaces", GH_ParamAccess.item, false);
             pManager.HideParameter(0);
-            Message = "TC-多面体-E-01\n等腰三角形";
+            Message = "11 Sides";
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace Vipers
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("外轮廓", "P", "得到外轮廓", GH_ParamAccess.list);
-            pManager.AddBrepParameter("多面体", "P", "得到多面体", GH_ParamAccess.list);
+            pManager.AddCurveParameter("Polyline", "P", "Output polylines", GH_ParamAccess.list);
+            pManager.AddBrepParameter("Polygon", "P", "Output faces", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -399,7 +399,7 @@ namespace Vipers
                 polygonA = value;
                 if ((polygonA))
                 {
-                    Message = "TC-多面体-E-01\n等腰三角形";
+                    Message = "11 Sides";
                 }
             }
         }
@@ -411,7 +411,7 @@ namespace Vipers
                 polygonB = value;
                 if ((polygonB))
                 {
-                    Message = "TC-多面体-E-02\n等腰三角形";
+                    Message = "24 Sides";
                 }
             }
         }
@@ -423,7 +423,7 @@ namespace Vipers
                 polygonC = value;
                 if ((polygonC))
                 {
-                    Message = "TC-多面体-E-03\n等腰三角形";
+                    Message = "60 Sides";
                 }
             }
         }
@@ -433,9 +433,9 @@ namespace Vipers
         protected override void AppendAdditionalComponentMenuItems(System.Windows.Forms.ToolStripDropDown menu)
         {
             // Append the item to the menu, making sure it's always enabled and checked if Absolute is True.
-            ToolStripMenuItem item = Menu_AppendItem(menu, "11面体", Menu_AbsoluteClicked, true, polygonA);
-            ToolStripMenuItem item2 = Menu_AppendItem(menu, "24面体", Menu_AbsoluteClicked2, true, polygonB);
-            ToolStripMenuItem item3 = Menu_AppendItem(menu, "60面体", Menu_AbsoluteClicked3, true, polygonC);
+            ToolStripMenuItem item = Menu_AppendItem(menu, "11 Sides", Menu_AbsoluteClicked, true, polygonA);
+            ToolStripMenuItem item2 = Menu_AppendItem(menu, "24 Sides", Menu_AbsoluteClicked2, true, polygonB);
+            ToolStripMenuItem item3 = Menu_AppendItem(menu, "60 Sides", Menu_AbsoluteClicked3, true, polygonC);
             // Specifically assign a tooltip text to the menu item.
             item.BackColor = cor1;
             item2.BackColor = cor2;

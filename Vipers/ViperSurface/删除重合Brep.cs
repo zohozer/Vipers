@@ -28,8 +28,8 @@ namespace Vipers////TangChi 2015.6.10(20151215修改)
         /// Initializes a new instance of the CullDuplicateBrep class.
         /// </summary>
         public CullDuplicateBrep()
-            : base("删除重合Brep", "CullDuplicateBrep",
-                "将重合的Brep删除（直接调用Brep中的“isDuplicate”方法，其中tolerance这一选项似乎作用不大）",
+            : base("Cull Duplicate Brep", "CullDupBrep",
+                "Cull duplicate Breps",
                 "Vipers", "Viper.surface")
         {
         }
@@ -39,10 +39,10 @@ namespace Vipers////TangChi 2015.6.10(20151215修改)
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddBrepParameter("brep列表","B","待删除的brep",GH_ParamAccess.list);
-            pManager.AddNumberParameter("公差","T","将重合的Brep删除（直接调用Brep中的“isDuplicate”方法，其中tolerance这一选项似乎作用不大）",GH_ParamAccess.item,0);
+            pManager.AddBrepParameter("Brep","B","Breps to operate on",GH_ParamAccess.list);
+            pManager.AddNumberParameter("Tolerance","T","Delete duplicate brep within this tolerance",GH_ParamAccess.item,0);
             pManager.HideParameter(0);
-            Message = "删除重合Brep";
+            Message = "Cull Duplicate Brep";
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace Vipers////TangChi 2015.6.10(20151215修改)
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddBrepParameter("brep列表","B","删除重合部分后的brep",GH_ParamAccess.list);
-            pManager.AddIntegerParameter("序号", "I", "重合brep在原列表中对应的序号", GH_ParamAccess.tree);
+            pManager.AddBrepParameter("Brep","B","Culled Breps",GH_ParamAccess.list);
+            pManager.AddIntegerParameter("Indices", "I", "Index map of culled Breps", GH_ParamAccess.tree);
         }
 
         /// <summary>

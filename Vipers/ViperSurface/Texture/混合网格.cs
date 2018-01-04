@@ -27,8 +27,8 @@ namespace Vipers
         /// Initializes a new instance of the 混合网格 class.
         /// </summary>
         public 混合网格()
-            : base("混合网格", "Complex",
-                "由八边形，菱形和三角形组成的混合网格",
+            : base("Complex Panels", "Complex",
+                "A hybrid mesh composed of octagons, rhombuses and triangles",
                 "Vipers", "Viper.surface")
         {
         }
@@ -41,11 +41,11 @@ namespace Vipers
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("曲面", "S", "待划分的曲面", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("u方向数量", "U", "u方向的网格数量", GH_ParamAccess.item, 50);
-            pManager.AddIntegerParameter("v方向数量", "V", "v方向的网格数量", GH_ParamAccess.item, 50);
+            pManager.AddSurfaceParameter("Surface", "S", "Surface to divide", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("U Count", "U", "Number of divisions in U direction", GH_ParamAccess.item, 10);
+            pManager.AddIntegerParameter("V Count", "V", "Number of divisions in V direction", GH_ParamAccess.item, 10);
             pManager.HideParameter(0);
-            Message = "TC-1-07\n混合网格";
+            Message = "Complex Panels";
         }
 
         /// <summary>
@@ -53,9 +53,9 @@ namespace Vipers
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("网格", "A", "生成的八边形网格", GH_ParamAccess.tree);
-            pManager.AddCurveParameter("网格", "B", "生成的菱形网格", GH_ParamAccess.tree);
-            pManager.AddCurveParameter("网格", "C", "生成的三角形网格", GH_ParamAccess.tree);
+            pManager.AddCurveParameter("Octagons", "O", "Edge lines", GH_ParamAccess.tree);
+            pManager.AddCurveParameter("Rhombuses", "R", "Edge lines", GH_ParamAccess.tree);
+            pManager.AddCurveParameter("Triangles", "T", "Edge lines", GH_ParamAccess.tree);
         }
 
         /// <summary>

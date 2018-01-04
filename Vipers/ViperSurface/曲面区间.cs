@@ -12,8 +12,8 @@ namespace Vipers
         /// Initializes a new instance of the SurfaceDomain class.
         /// </summary>
         public SurfaceDomain()
-            : base("曲面区间", "SurfaceDomain",
-                "更改曲面区间（默认输出曲面的原区间）",
+            : base("Surface Domain", "SrfDomain",
+                "Change surface domain",
                 "Vipers", "Viper.surface")
         {
         }
@@ -23,11 +23,11 @@ namespace Vipers
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("曲面","S","待修改区间的曲面",GH_ParamAccess.item);
-            pManager.AddIntervalParameter("U区间", "U", "用户设置u方向区间（如果不更改，则输出原曲面u方向区间）", GH_ParamAccess.item, new Interval(0, 0));
-            pManager.AddIntervalParameter("V区间","V","用户设置v方向区间（如果不更改，则输出原曲面v方向区间）",GH_ParamAccess.item,new Interval(0,0));
+            pManager.AddSurfaceParameter("Surface","S","Surface to modify",GH_ParamAccess.item);
+            pManager.AddIntervalParameter("U Domain", "U", "Input U domain", GH_ParamAccess.item, new Interval(0, 0));
+            pManager.AddIntervalParameter("V Domain","V","Input V domain",GH_ParamAccess.item,new Interval(0,0));
             pManager.HideParameter(0);
-            Message = "曲面区间";
+            Message = "Surface Domain";
         }
 
         /// <summary>
@@ -35,10 +35,10 @@ namespace Vipers
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("曲面", "S", "修改后的曲面", GH_ParamAccess.item);
-            pManager.AddIntervalParameter("U区间", "U", "修改后u方向区间", GH_ParamAccess.item);
-            pManager.AddIntervalParameter("V区间", "V", "修改后v方向区间", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("闭合情况","R","如果是闭合曲面，则判断是哪里闭合(0：U方向闭合  1：V方向闭合)",GH_ParamAccess.item);
+            pManager.AddSurfaceParameter("Surface", "S", "Modified surface", GH_ParamAccess.item);
+            pManager.AddIntervalParameter("U Domain", "U", "Modified U domain", GH_ParamAccess.item);
+            pManager.AddIntervalParameter("V Domain", "V", "Modified V domain", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("Closed","C", "Determine direction of closed surface (0: U direction closed, 1: V direction closed)", GH_ParamAccess.item);
         }
 
         /// <summary>

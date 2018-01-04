@@ -28,8 +28,8 @@ namespace Vipers////TangChi 2015 8 11
         /// Initializes a new instance of the MyComponent35 class.
         /// </summary>
         public PlanerSurface()
-            : base("平面曲面", "PlanerSurface",
-                "根据长宽生成平面曲面，负数表示反向",
+            : base("Planar Surface", "PlanarSurface",
+                "Create a planar surface by its length and width",
                  "Vipers", "Viper.surface")
         {
         }
@@ -43,11 +43,11 @@ namespace Vipers////TangChi 2015 8 11
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddPlaneParameter("平面","P","参考平面",GH_ParamAccess.item,Plane.WorldXY);
-            pManager.AddNumberParameter("长度","L","平面曲面的长度",GH_ParamAccess.item,100);
-            pManager.AddNumberParameter("宽度", "W", "平面曲面的宽度", GH_ParamAccess.item,100);
+            pManager.AddPlaneParameter("Plane","P","Base plane",GH_ParamAccess.item,Plane.WorldXY);
+            pManager.AddNumberParameter("Length","L","Surface length",GH_ParamAccess.item,100);
+            pManager.AddNumberParameter("Width", "W", "Surface width", GH_ParamAccess.item,100);
             pManager.HideParameter(0);
-            Message = "平面曲面";
+            Message = "Planar Surface";
         }
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace Vipers////TangChi 2015 8 11
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("曲面","S","平面曲面",GH_ParamAccess.list);
-            pManager.AddPointParameter("角点","P","曲面的四个角点",GH_ParamAccess.list);
-            pManager.AddCurveParameter("边","E","曲面的四条边",GH_ParamAccess.list);
+            pManager.AddSurfaceParameter("Surface","S","Resulting surface",GH_ParamAccess.list);
+            pManager.AddPointParameter("Vertices","V","Surface vertices",GH_ParamAccess.list);
+            pManager.AddCurveParameter("Edges","E","Surface edges",GH_ParamAccess.list);
             pManager.HideParameter(1);
             pManager.HideParameter(2);
         }

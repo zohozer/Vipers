@@ -29,8 +29,8 @@ namespace SuperVipers///TangChi 2015.8.5
         /// Initializes a new instance of the MyComponent58 class.
         /// </summary>
         public BulgeSkin()
-            : base("突出表皮", "BulgeSkin",
-                "根据用户提供的曲面生成由平板构成的突出表皮",
+            : base("Protrusion 1", "BulgeSkin",
+                "A flat protrusion on input surface",
                 "Vipers", "Viper.surface")
         {
         }
@@ -43,12 +43,12 @@ namespace SuperVipers///TangChi 2015.8.5
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddBrepParameter("曲面", "S", "待加盖的曲面", GH_ParamAccess.item);
-            pManager.AddNumberParameter("高度", "H", "突出的高度", GH_ParamAccess.item);
-            pManager.AddNumberParameter("程度", "P", "突出程度，输入0~1之间的小数", GH_ParamAccess.item, 0.5);
-            pManager.AddBooleanParameter("反转", "R", "更改突出方向", GH_ParamAccess.item, true);
+            pManager.AddBrepParameter("Surface", "S", "Surface to operate on", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Height", "H", "Height of protruson", GH_ParamAccess.item, 10);
+            pManager.AddNumberParameter("Protrusion", "P", "Degree of protrusion (1 for full enclosure)", GH_ParamAccess.item, 0.5);
+            pManager.AddBooleanParameter("Flip", "F", "Flip direction", GH_ParamAccess.item, true);
             pManager.HideParameter(0);
-            Message = "TC-0-01\n凸板1";
+            Message = "Protrusion 1";
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace SuperVipers///TangChi 2015.8.5
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddBrepParameter("表皮", "B", "建筑表皮", GH_ParamAccess.list);
+            pManager.AddBrepParameter("Brep", "B", "Resulting geometry", GH_ParamAccess.list);
         }
 
         /// <summary>

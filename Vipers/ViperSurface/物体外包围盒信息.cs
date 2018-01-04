@@ -12,8 +12,8 @@ namespace Vipers////TangChi 2018.8.6
         /// Initializes a new instance of the MyComponent34 class.
         /// </summary>
         public BoxInformation()
-            : base("物体外包围盒信息", "BoxInformation",
-                "提取物体外包围盒（boundingbox）及其长，宽，高，顶面中点，底面中点",
+            : base("Bounding Box Info", "BoxInfo",
+                "Get length, width, height and top/bottom centroids of a bounding box",
                  "Vipers", "Viper.surface")
         {
         }
@@ -23,11 +23,11 @@ namespace Vipers////TangChi 2018.8.6
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddBrepParameter("物件","B","被boundingbox包裹的物体",GH_ParamAccess.item);
-            pManager.AddPlaneParameter("参考平面","P","设置参考平面",GH_ParamAccess.item,Plane.WorldXY);
+            pManager.AddBrepParameter("Brep","B","Brep to contain",GH_ParamAccess.item);
+            pManager.AddPlaneParameter("Plane","P","Bounding box base plane",GH_ParamAccess.item,Plane.WorldXY);
             pManager.HideParameter(0);
             pManager.HideParameter(1);
-            Message = "物体外包围盒信息";
+            Message = "Bounding Box Info";
         }
 
         /// <summary>
@@ -35,12 +35,12 @@ namespace Vipers////TangChi 2018.8.6
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddBoxParameter("包围盒","B","物体的外包围盒",GH_ParamAccess.item);
-            pManager.AddNumberParameter("长度","L","包围盒的长度",GH_ParamAccess.item);
-            pManager.AddNumberParameter("宽度", "W", "包围盒的宽度", GH_ParamAccess.item);
-            pManager.AddNumberParameter("高度", "H", "包围盒的高度", GH_ParamAccess.item);
-            pManager.AddPointParameter("顶面中点","P","包围盒的顶面中点",GH_ParamAccess.item);
-            pManager.AddPointParameter("底面中点", "P", "包围盒的底面中点", GH_ParamAccess.item);
+            pManager.AddBoxParameter("Box","B","Bounding box",GH_ParamAccess.item);
+            pManager.AddNumberParameter("Length","L","Box length",GH_ParamAccess.item);
+            pManager.AddNumberParameter("Width", "W", "Box width", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Height", "H", "Box height", GH_ParamAccess.item);
+            pManager.AddPointParameter("Top Centroid","P", "Box top centroid", GH_ParamAccess.item);
+            pManager.AddPointParameter("Bottom Centroid", "P", "Box bottom centroid", GH_ParamAccess.item);
         }
 
         /// <summary>

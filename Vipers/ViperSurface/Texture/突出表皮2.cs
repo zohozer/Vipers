@@ -30,8 +30,8 @@ namespace SuperVipers/////TangChi 2015.8.14
         /// Initializes a new instance of the MyComponent57 class.
         /// </summary>
         public BulgeSkin2()
-            : base("突出表皮2", "BulgeSkin2",
-                "根据用户提供的曲面生成由平板构成的突出表皮及平板顶盖",
+            : base("Protrusion 2", "BulgeSkin2",
+                "A flat protrusion on input surface",
                 "Vipers", "Viper.surface")
         {
         }
@@ -44,15 +44,15 @@ namespace SuperVipers/////TangChi 2015.8.14
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddBrepParameter("曲面", "S", "待加盖的曲面", GH_ParamAccess.item);
-            pManager.AddNumberParameter("公差1", "T1", "距离公差，用于简化曲面轮廓", GH_ParamAccess.item, 1);
-            pManager.AddNumberParameter("公差2", "T2", "角度公差，用于简化曲面轮廓", GH_ParamAccess.item, 1);
-            pManager.AddNumberParameter("高度", "H", "突出于平面的总高度", GH_ParamAccess.item, 100);
-            pManager.AddNumberParameter("程度", "P", "突出部分占高度的比例", GH_ParamAccess.item, 0.5);
-            pManager.AddBooleanParameter("方向", "R", "是否切换方向", GH_ParamAccess.item, false);
-            pManager.AddBooleanParameter("加盖", "C", "是否加盖", GH_ParamAccess.item, false);
+            pManager.AddBrepParameter("Surface", "S", "Surface to operate on", GH_ParamAccess.item);
+            pManager.AddNumberParameter("Tolerance 1", "T1", "Distance tolerance, used to simplify surface contour", GH_ParamAccess.item, 1);
+            pManager.AddNumberParameter("Tolerance 2", "T2", "Angle tolerance, used to simplify surface contour", GH_ParamAccess.item, 1);
+            pManager.AddNumberParameter("Height", "H", "Height of protruson", GH_ParamAccess.item, 100);
+            pManager.AddNumberParameter("Protrusion", "P", "Degree of protrusion (1 for full enclosure)", GH_ParamAccess.item, 0.5);
+            pManager.AddBooleanParameter("Flip", "F", "Flip direction", GH_ParamAccess.item, false);
+            pManager.AddBooleanParameter("Cap", "C", "Cap the top", GH_ParamAccess.item, false);
             pManager.HideParameter(0);
-            Message = "TC-0-02\n凸板2";
+            Message = "Protrusion 2";
         }
 
         /// <summary>
@@ -60,8 +60,8 @@ namespace SuperVipers/////TangChi 2015.8.14
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddBrepParameter("表皮", "B", "建筑表皮", GH_ParamAccess.list);
-            pManager.AddCurveParameter("轮廓线", "C", "表皮的轮廓线", GH_ParamAccess.list);
+            pManager.AddBrepParameter("Brep", "B", "Resulting geometry", GH_ParamAccess.list);
+            pManager.AddCurveParameter("Edges", "E", "Edge lines", GH_ParamAccess.list);
         }
 
         /// <summary>

@@ -28,8 +28,8 @@ namespace Vipers
         /// Initializes a new instance of the MyComponent1 class.
         /// </summary>
         public Bricks()
-            : base("砖纹网格", "Bricks",
-                "基于Lunchbox的砖纹网格，修复了闭合曲面接缝bug",
+            : base("Brick Panels", "Bricks",
+                "Based on Lunchbox Staggered Quads",
                 "Vipers", "Viper.surface")
         {
         }
@@ -42,10 +42,10 @@ namespace Vipers
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            Message = "TC-1-06\n砖纹网格";
-            pManager.AddSurfaceParameter("曲面", "S", "待划分的曲面", GH_ParamAccess.item);
-            pManager.AddIntegerParameter("u方向数量", "U", "u方向的网格数量", GH_ParamAccess.item, 50);
-            pManager.AddIntegerParameter("v方向数量", "V", "v方向的网格数量", GH_ParamAccess.item, 20);
+            Message = "Brick Panels";
+            pManager.AddSurfaceParameter("Surface", "S", "Surface to divide", GH_ParamAccess.item);
+            pManager.AddIntegerParameter("U Count", "U", "Number of divisions in U direction", GH_ParamAccess.item, 10);
+            pManager.AddIntegerParameter("V Count", "V", "Number of divisions in V direction", GH_ParamAccess.item, 10);
             pManager.HideParameter(0);
         }
 
@@ -54,7 +54,7 @@ namespace Vipers
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("砖纹网格", "C", "生成的砖纹网格", GH_ParamAccess.tree);
+            pManager.AddCurveParameter("Bricks", "B", "Edge lines", GH_ParamAccess.tree);
         }
 
         /// <summary>

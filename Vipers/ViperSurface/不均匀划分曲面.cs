@@ -27,8 +27,8 @@ namespace Vipers//////TangChi 2015.7.8
         /// Initializes a new instance of the MyComponent23 class.
         /// </summary>
         public UnevenSurface()
-            : base("不均匀划分曲面", "UnevenSurface",
-                "找出Brep的角点",
+            : base("Divide Surface Randomly", "SrfDivideRand",
+                "Random division of the surface",
                 "Vipers", "Viper.surface")
         {
         }
@@ -41,12 +41,12 @@ namespace Vipers//////TangChi 2015.7.8
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-           pManager.AddSurfaceParameter("待划分曲面","S","待划分曲面",GH_ParamAccess.item);
-            pManager.AddIntegerParameter("U方向的数量","NU","u方向的数量",GH_ParamAccess.item,15);
-            pManager.AddIntegerParameter("V方向的数量","NV","v方向的数量",GH_ParamAccess.item,10);
-            pManager.AddIntegerParameter("差异性","O","数字越大不均匀效果越明显",GH_ParamAccess.item,20);
-            pManager.AddIntegerParameter("随机种子","S","随机种子",GH_ParamAccess.item,0);
-            Message = "随机划分曲面";
+           pManager.AddSurfaceParameter("Surface","S","Surface to divide",GH_ParamAccess.item);
+            pManager.AddIntegerParameter("U Count","U","Number of segments in U direction",GH_ParamAccess.item,10);
+            pManager.AddIntegerParameter("V Count","V", "Number of segments in V direction", GH_ParamAccess.item,10);
+            pManager.AddIntegerParameter("Difference","D", "The larger the number, the more uneven the effect is", GH_ParamAccess.item,20);
+            pManager.AddIntegerParameter("Seed","S","Seed of random variation",GH_ParamAccess.item,0);
+            Message = "Divide Surface Randomly";
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace Vipers//////TangChi 2015.7.8
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddSurfaceParameter("划分后的曲面","S","划分后的曲面",GH_ParamAccess.tree);
-            pManager.AddInterval2DParameter("区间","I","每个曲面对应的区间",GH_ParamAccess.tree);
+            pManager.AddSurfaceParameter("Surface","S","Dividing surface",GH_ParamAccess.tree);
+            pManager.AddInterval2DParameter("Interval","I", "The corresponding interval for each surface", GH_ParamAccess.tree);
         }
 
         /// <summary>

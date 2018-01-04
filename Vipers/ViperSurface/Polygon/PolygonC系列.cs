@@ -28,8 +28,8 @@ namespace myGha
         /// Initializes a new instance of the MyComponent5 class.
         /// </summary>
         public PolyC()
-            : base("多边形组合多面体", "PolygonC",
-                "多边形组合多面体，seal端输入为true时，生成曲面，否则只生成外轮廓多边形。右键多选",
+            : base("Composite Polyhedron", "PolygonC",
+                "Create a polyhedron composed of multiple types of polygons (RMB to change shape)",
                 "Vipers", "Viper.surface")
         {
         }
@@ -42,11 +42,11 @@ namespace myGha
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
-            pManager.AddPlaneParameter("参考平面", "P", "多面体的参考平面", GH_ParamAccess.item, Plane.WorldXY);
-            pManager.AddNumberParameter("半径", "R", "多面体半径", GH_ParamAccess.item, 100);
-            pManager.AddBooleanParameter("封面", "S", "true：封面，false：不封面", GH_ParamAccess.item, false);
+            pManager.AddPlaneParameter("Plane", "P", "Base plane", GH_ParamAccess.item, Plane.WorldXY);
+            pManager.AddNumberParameter("Radius", "R", "Shape radius", GH_ParamAccess.item, 1);
+            pManager.AddBooleanParameter("Surface", "S", "Output surfaces", GH_ParamAccess.item, false);
             pManager.HideParameter(0);
-            Message = "TC-多面体-C-01\n组合多边形";
+            Message = "Shape 1 (842 Sides)";
         }
 
         /// <summary>
@@ -54,8 +54,8 @@ namespace myGha
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddCurveParameter("外轮廓", "P", "得到外轮廓", GH_ParamAccess.list);
-            pManager.AddBrepParameter("多面体", "P", "得到多面体", GH_ParamAccess.list);
+            pManager.AddCurveParameter("Polyline", "P", "Output polylines", GH_ParamAccess.list);
+            pManager.AddBrepParameter("Polygon", "P", "Output faces", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -10367,7 +10367,7 @@ namespace myGha
                polygonA = value;
                if ((polygonA))
                {
-                   Message = "TC-多面体-C-01\n组合多边形";
+                   Message = "Shape 1 (842 Sides)";
                }
            }
        }
@@ -10379,7 +10379,7 @@ namespace myGha
                polygonB = value;
                if ((polygonB))
                {
-                   Message = "TC-多面体-C-02\n组合多边形";
+                   Message = "Shape 2 (902 Sides)";
                }
            }
        }
@@ -10391,7 +10391,7 @@ namespace myGha
                polygonC = value;
                if ((polygonC))
                {
-                   Message = "TC-多面体-C-03\n组合多边形(稀疏)";
+                   Message = "Shape 3 (92 Sides)";
                }
            }
        }
@@ -10403,7 +10403,7 @@ namespace myGha
                polygonD = value;
                if ((polygonD))
                {
-                   Message = "TC-多面体-C-03\n组合多边形(普通)";
+                   Message = "Shape 4 (272 Sides)";
                }
            }
        }
@@ -10415,7 +10415,7 @@ namespace myGha
                polygonE = value;
                if ((polygonE))
                {
-                   Message = "TC-多面体-C-03\n组合多边形(致密)";
+                   Message = "Shape 5 (632 Sides)";
                }
            }
        }
@@ -10470,21 +10470,21 @@ namespace myGha
        protected override void AppendAdditionalComponentMenuItems(System.Windows.Forms.ToolStripDropDown menu)
        {
            // Append the item to the menu, making sure it's always enabled and checked if Absolute is True.
-           ToolStripMenuItem item = Menu_AppendItem(menu, "组合样式1（842面体）", Menu_AbsoluteClicked, true, PolygonA);
-           ToolStripMenuItem item2 = Menu_AppendItem(menu, "组合样式2（902面体）", Menu_AbsoluteClicked2, true, PolygonB);
-           ToolStripMenuItem item3 = Menu_AppendItem(menu, "组合样式3（92面体）", Menu_AbsoluteClicked3, true, PolygonC);
-           ToolStripMenuItem item4 = Menu_AppendItem(menu, "组合样式3（272面体）", Menu_AbsoluteClicked4, true, PolygonD);
-           ToolStripMenuItem item5 = Menu_AppendItem(menu, "组合样式3（632面体）", Menu_AbsoluteClicked5, true, PolygonE);
+           ToolStripMenuItem item = Menu_AppendItem(menu, "Shape 1 (842 Sides)", Menu_AbsoluteClicked, true, PolygonA);
+           ToolStripMenuItem item2 = Menu_AppendItem(menu, "Shape 2 (902 Sides)", Menu_AbsoluteClicked2, true, PolygonB);
+           ToolStripMenuItem item3 = Menu_AppendItem(menu, "Shape 3 (92 Sides)", Menu_AbsoluteClicked3, true, PolygonC);
+           ToolStripMenuItem item4 = Menu_AppendItem(menu, "Shape 4 (272 Sides)", Menu_AbsoluteClicked4, true, PolygonD);
+           ToolStripMenuItem item5 = Menu_AppendItem(menu, "Shape 5 (632 Sides)", Menu_AbsoluteClicked5, true, PolygonE);
            // Specifically assign a tooltip text to the menu item.
-           item.ToolTipText = "组合多边形形成的多面体";
+           item.ToolTipText = "A polyhedron formed by combined polygons";
            item.BackColor = cor1;
-           item2.ToolTipText = "组合多边形形成的多面体";
+           item2.ToolTipText = "A polyhedron formed by combined polygons";
            item2.BackColor = cor2;
-           item3.ToolTipText = "组合多边形形成的多面体";
+           item3.ToolTipText = "A polyhedron formed by combined polygons";
            item3.BackColor = cor3;
-           item4.ToolTipText = "组合多边形形成的多面体";
+           item4.ToolTipText = "A polyhedron formed by combined polygons";
            item4.BackColor = cor4;
-           item5.ToolTipText = "组合多边形形成的多面体";
+           item5.ToolTipText = "A polyhedron formed by combined polygons";
            item5.BackColor = cor5;
        }
        private void Menu_AbsoluteClicked(object sender, EventArgs e)
